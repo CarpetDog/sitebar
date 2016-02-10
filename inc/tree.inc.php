@@ -823,7 +823,8 @@ class SB_Tree extends SB_ErrorHandler
             case 'waiting':
                 break;
         }
-
+        
+        date_default_timezone_set('UTC');
         $today = date('Y-m-d');
 
         $rset = $this->db->select( $select, $from, $where, $orderBy);
